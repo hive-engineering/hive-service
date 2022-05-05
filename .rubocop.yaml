@@ -1,0 +1,98 @@
+require: rubocop-rspec
+AllCops:
+  TargetRubyVersion: 3.1.2
+  DisplayCopNames: true
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - '**/*.rake'
+    - 'licenses/*'
+
+Documentation:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 120
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*.rb'
+    - config/routes.rb
+
+Style/Documentation:
+  Enabled: false
+
+# This rule enforces the same delimiters to be used everywhere for %-literals.
+# Each type of %-literal can be configured to use it's own specific notation when needed.
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  ()
+    '%i': ()
+    '%q': ()
+    '%Q': ()
+    '%r': '{}'
+    '%s': ()
+    '%w': ()
+    '%W': ()
+    '%x': ()
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+# This rule ensures that all Regex expression are written using the same style.
+# The current configuration will be inline with the string array where %w is forced.
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+  AllowInnerSlashes: false
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: true
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
+
+Naming/PredicateName:
+  Enabled: true
+
+Style/EmptyLiteral:
+  Enabled: true
+
+Style/ExpandPathArguments:
+  Enabled: true
+
+Style/NumericLiterals:
+  Enabled: true
+
+Style/WordArray:
+  Enabled: true
+
+Layout/ClosingHeredocIndentation:
+  Enabled: true
+
+RSpec/EmptyLineAfterExampleGroup:
+  Enabled: true
+
+Style/RandomWithOffset:
+  Enabled: true
+
+Style/WhileUntilModifier:
+  Enabled: true
