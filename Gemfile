@@ -1,6 +1,13 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+source 'https://rubygems.org'
 
 # Specify your gem's dependencies in hive-service.gemspec
 gemspec
+
+group :development do
+  gem 'pry', platforms: [:mri]
+  gem 'rspec'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
+end
