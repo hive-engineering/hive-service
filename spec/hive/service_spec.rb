@@ -463,6 +463,28 @@ RSpec.describe Hive::Service do
       end
     end
 
+    context 'with any type' do
+      let(:outcome) { Specs::SimpleService.run(params) }
+
+      context 'when passing symbol type' do
+        let(:params) { { some_attribute: :some_symbol } }
+
+        it { expect(outcome).to be_success }
+      end
+
+      context 'when passing string type' do
+        let(:params) { { some_attribute: 'some_string' } }
+
+        it { expect(outcome).to be_success }
+      end
+
+      context 'when passing an object' do
+        let(:params) { { some_attribute: Specs::SomeClass.new } }
+
+        it { expect(outcome).to be_success }
+      end
+    end
+
     context 'with array type' do
       let(:outcome) { Specs::ServiceWithArrayType.run(params) }
 
