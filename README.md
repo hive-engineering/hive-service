@@ -142,7 +142,7 @@ To add error and halt execution immediately use:
 add_error!(:some_field, :this_is_error)
 ```
 
-# Errors object
+## Errors object
 
 Errors object is similar to hash but with some adjustments.
 If you only care about error values then you can run `#to_h`.
@@ -291,7 +291,7 @@ Any type should be used with `dry-type` `Any` syntax:
 attribute :some_attribute, type: Types::Any
 ```
 
-The use of `Any` type should be limited as much as possible since it opposes the whole concept of typing in the first place!
+> The use of `Any` type should be limited as much as possible since it contradicts the whole concept of typing in the first place!
 
 ### Any any type
 
