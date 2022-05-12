@@ -17,6 +17,16 @@ And then execute:
 Or install it yourself as:
 
     $ gem install hive-service
+    
+To install the gem locally you need to have your bundle configured to fetch from our org's private repos. Follow the following steps to do so:
+1. Go to your github settings -> Developer settings -> Personal access tokens
+2. Create a new token and check the repo permissions
+3. Save your token somewhere
+4. On your local machine use the following command:
+```bash
+$ bundle config github.com 'YOUR_TOKEN_HERE'
+```
+5. Restart your terminal session and bundling should work as expected!
 
 ## Usage
 
