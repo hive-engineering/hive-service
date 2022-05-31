@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['mohamed.elmenisy@hive.app']
 
   spec.summary       = 'Hive service layer'
-  spec.license       = 'private'
+  spec.license       = 'MIT'
 
   spec.files         = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
